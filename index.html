@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FINNISHTA Wealth & Tax Consultancy</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#12233f;background:#f7faff}
+header{background:linear-gradient(135deg,#082b63,#1167b1);color:white;padding:22px 6%;position:sticky;top:0;z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;font-size:20px}.menu{font-size:28px;cursor:pointer}
+.sub{display:none;position:absolute;right:6%;top:70px;background:white;color:#12233f;border-radius:14px;padding:12px;box-shadow:0 12px 30px #0002;width:250px}.sub a{display:block;padding:12px;text-decoration:none;color:#12233f;border-radius:8px}.sub a:hover{background:#edf5ff}.sub.show{display:block}
+.hero{padding:80px 6%;background:linear-gradient(180deg,#eaf4ff,#fff)}.hero h1{font-size:clamp(38px,6vw,64px);margin:0 0 18px}.hero p{font-size:20px;max-width:700px;line-height:1.6}.buttons a{display:inline-block;margin:10px 8px 0 0;padding:14px 22px;border-radius:9px;text-decoration:none;font-weight:700}.primary{background:#0b63ce;color:white}.secondary{border:2px solid #0b63ce;color:#0b63ce}
+section{padding:65px 6%;max-width:1200px;margin:auto}h2{text-align:center;font-size:34px;margin-bottom:12px}.lead{text-align:center;color:#53657d;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:white;padding:25px;border-radius:16px;box-shadow:0 8px 25px #16345a12;border:1px solid #e3ebf5}.icon{font-size:32px}.card h3{margin:12px 0}.card p{color:#596b82;line-height:1.55}
+.contact{background:#082b63;color:white;max-width:none}.contact-inner{max-width:1100px;margin:auto}.contact a{color:white}.footer{text-align:center;padding:20px;background:#061e46;color:#dbe8fa;font-size:14px}
+
+input,textarea{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #ccd9e8;border-radius:8px;font:inherit}label{font-weight:600;font-size:14px}button{border:0;cursor:pointer;padding:12px 16px;border-radius:8px;font-weight:700;margin:4px}.secondary{background:white}
+
+.service-menu{max-width:850px;margin:25px auto}.main-service{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #dbe7f4;border-radius:12px;padding:18px 20px;margin:10px 0;cursor:pointer;font-weight:800;font-size:18px;box-shadow:0 5px 18px #16345a10}.main-service:hover{background:#f1f7ff}.main-service b{font-size:24px}.sub-services{display:none;background:#edf5ff;border-radius:0 0 12px 12px;padding:8px 10px;margin-top:-10px;margin-bottom:10px}.sub-services.show{display:block}.service-item{background:#fff;margin:7px;padding:13px 15px;border-radius:8px;cursor:pointer;border:1px solid #e0e9f3}.service-item:hover{background:#dcecff;border-color:#8db8e9}
+@media(max-width:600px){.hero{padding-top:55px}.hero h1{font-size:40px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">FINNISHTA WEALTH & TAX CONSULTANCY</div>
+    <div class="menu" onclick="document.querySelector('.sub').classList.toggle('show')" aria-label="Open services menu">☰</div>
+  </div>
+  <div class="sub">
+    <a href="#home">🏠 Home</a><a href="#ca">💰 Tax & CA Services</a>
+    <a href="#business">🏢 Business & Compliance</a><a href="#legal">⚖️ Legal Assistance</a>
+    <a href="#wealth">📈 Wealth & Financial Consultancy</a><a href="#contact">📞 Contact</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<h1>Trusted Tax, Finance & Business Consultancy</h1>
+<p>Practical support for individuals and businesses with tax filing, accounting, GST, compliance, financial planning and legal-documentation assistance.</p>
+<div class="buttons"><a class="primary" href="tel:08951954077">📞 Call Now</a><a class="secondary" href="https://wa.me/918951954077">💬 WhatsApp</a></div>
+</section>
+
+<section id="ca">
+<h2>Our Services</h2>
+<p class="lead">Tap a main service to see the complete list of related services. Select any service to open its enquiry form.</p>
+
+<div class="service-menu">
+  <div class="main-service open" onclick="toggleServices('incomeServices', this)">
+    <span>1️⃣ Income Tax</span><b>＋</b>
+  </div>
+  <div id="incomeServices" class="sub-services">
+    <div class="service-item" onclick="openForm('ITR 1 Filing')">ITR 1 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 2 Filing')">ITR 2 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 3 Filing')">ITR 3 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 4 Filing')">ITR 4 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 5 Filing')">ITR 5 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 6 Filing')">ITR 6 Filing</div>
+    <div class="service-item" onclick="openForm('ITR 7 Filing')">ITR 7 Filing</div>
+    <div class="service-item" onclick="openForm('Income Tax Computation')">Income Tax Computation</div>
+    <div class="service-item" onclick="openForm('Advance Tax Assistance')">Advance Tax Assistance</div>
+    <div class="service-item" onclick="openForm('TDS Return Filing')">TDS Return Filing</div>
+    <div class="service-item" onclick="openForm('TDS Certificate / Form 16 Assistance')">TDS Certificate / Form 16 Assistance</div>
+    <div class="service-item" onclick="openForm('Income Tax Notice Assistance')">Income Tax Notice Assistance</div>
+    <div class="service-item" onclick="openForm('Rectification / Revised Return')">Rectification / Revised Return</div>
+    <div class="service-item" onclick="openForm('PAN / TAN Assistance')">PAN / TAN Assistance</div>
+    <div class="service-item" onclick="openForm('Tax Planning Assistance')">Tax Planning Assistance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('gstServices', this)"><span>2️⃣ GST</span><b>＋</b></div>
+  <div id="gstServices" class="sub-services">
+    <div class="service-item" onclick="openForm('GST Registration')">GST Registration</div>
+    <div class="service-item" onclick="openForm('GST Amendment')">GST Amendment</div>
+    <div class="service-item" onclick="openForm('GST Cancellation')">GST Cancellation</div>
+    <div class="service-item" onclick="openForm('GST Return Filing - GSTR-1')">GSTR-1 Filing</div>
+    <div class="service-item" onclick="openForm('GST Return Filing - GSTR-3B')">GSTR-3B Filing</div>
+    <div class="service-item" onclick="openForm('Composition Scheme Assistance')">Composition Scheme Assistance</div>
+    <div class="service-item" onclick="openForm('GST Reconciliation')">GST Reconciliation</div>
+    <div class="service-item" onclick="openForm('GST Notice Assistance')">GST Notice Assistance</div>
+    <div class="service-item" onclick="openForm('GST LUT Assistance')">GST LUT Assistance</div>
+    <div class="service-item" onclick="openForm('E-Invoice / E-Way Bill Assistance')">E-Invoice / E-Way Bill Assistance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('accountsServices', this)"><span>3️⃣ Accounting & Bookkeeping</span><b>＋</b></div>
+  <div id="accountsServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Monthly Bookkeeping')">Monthly Bookkeeping</div>
+    <div class="service-item" onclick="openForm('Year-End Accounts')">Year-End Accounts</div>
+    <div class="service-item" onclick="openForm('Profit & Loss Statement')">Profit & Loss Statement</div>
+    <div class="service-item" onclick="openForm('Balance Sheet Preparation')">Balance Sheet Preparation</div>
+    <div class="service-item" onclick="openForm('Cash Flow Statement')">Cash Flow Statement</div>
+    <div class="service-item" onclick="openForm('Bank Reconciliation')">Bank Reconciliation</div>
+    <div class="service-item" onclick="openForm('Ledger & Voucher Management')">Ledger & Voucher Management</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('companyServices', this)"><span>4️⃣ Company & Business Services</span><b>＋</b></div>
+  <div id="companyServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Private Limited Company Registration Assistance')">Private Limited Company Registration Assistance</div>
+    <div class="service-item" onclick="openForm('LLP Registration Assistance')">LLP Registration Assistance</div>
+    <div class="service-item" onclick="openForm('Partnership Firm Assistance')">Partnership Firm Assistance</div>
+    <div class="service-item" onclick="openForm('Proprietorship Setup Assistance')">Proprietorship Setup Assistance</div>
+    <div class="service-item" onclick="openForm('MCA / ROC Compliance')">MCA / ROC Compliance</div>
+    <div class="service-item" onclick="openForm('Annual Filing Assistance')">Annual Filing Assistance</div>
+    <div class="service-item" onclick="openForm('Director / Company Changes Assistance')">Director / Company Changes Assistance</div>
+    <div class="service-item" onclick="openForm('Business Registration Assistance')">Business Registration Assistance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('registrationServices', this)"><span>5️⃣ Registrations & Licences</span><b>＋</b></div>
+  <div id="registrationServices" class="sub-services">
+    <div class="service-item" onclick="openForm('MSME / Udyam Registration')">MSME / Udyam Registration</div>
+    <div class="service-item" onclick="openForm('Shop & Establishment Assistance')">Shop & Establishment Assistance</div>
+    <div class="service-item" onclick="openForm('Professional Tax Registration Assistance')">Professional Tax Registration Assistance</div>
+    <div class="service-item" onclick="openForm('Digital Signature Assistance')">Digital Signature Assistance</div>
+    <div class="service-item" onclick="openForm('PAN / TAN Application Assistance')">PAN / TAN Application Assistance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('payrollServices', this)"><span>6️⃣ Payroll & TDS</span><b>＋</b></div>
+  <div id="payrollServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Payroll Processing')">Payroll Processing</div>
+    <div class="service-item" onclick="openForm('Salary TDS Assistance')">Salary TDS Assistance</div>
+    <div class="service-item" onclick="openForm('Form 16 / 16A Assistance')">Form 16 / 16A Assistance</div>
+    <div class="service-item" onclick="openForm('Employee TDS Support')">Employee TDS Support</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('auditServices', this)"><span>7️⃣ Audit & Compliance Support</span><b>＋</b></div>
+  <div id="auditServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Tax Audit Support')">Tax Audit Support</div>
+    <div class="service-item" onclick="openForm('Statutory Compliance Support')">Statutory Compliance Support</div>
+    <div class="service-item" onclick="openForm('Financial Statement Review Support')">Financial Statement Review Support</div>
+    <div class="service-item" onclick="openForm('Compliance Calendar Assistance')">Compliance Calendar Assistance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('legalServices', this)"><span>8️⃣ Legal & Documentation Assistance</span><b>＋</b></div>
+  <div id="legalServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Business Agreement Documentation')">Business Agreement Documentation</div>
+    <div class="service-item" onclick="openForm('Contract Documentation Assistance')">Contract Documentation Assistance</div>
+    <div class="service-item" onclick="openForm('Property Document Assistance')">Property Document Assistance</div>
+    <div class="service-item" onclick="openForm('Legal Notice Documentation Assistance')">Legal Notice Documentation Assistance</div>
+    <div class="service-item" onclick="openForm('Advocate Coordination')">Advocate Coordination</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('financialServices', this)"><span>9️⃣ Financial & Business Consultancy</span><b>＋</b></div>
+  <div id="financialServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Business Financial Planning')">Business Financial Planning</div>
+    <div class="service-item" onclick="openForm('Cash Flow Planning')">Cash Flow Planning</div>
+    <div class="service-item" onclick="openForm('Budgeting Assistance')">Budgeting Assistance</div>
+    <div class="service-item" onclick="openForm('Financial Planning Guidance')">Financial Planning Guidance</div>
+  </div>
+
+  <div class="main-service" onclick="toggleServices('otherServices', this)"><span>🔟 Other Services</span><b>＋</b></div>
+  <div id="otherServices" class="sub-services">
+    <div class="service-item" onclick="openForm('Business Consultation')">Business Consultation</div>
+    <div class="service-item" onclick="openForm('Document Preparation Assistance')">Document Preparation Assistance</div>
+    <div class="service-item" onclick="openForm('Online Government Portal Assistance')">Online Government Portal Assistance</div>
+    <div class="service-item" onclick="openForm('Other Requirement')">Other Requirement</div>
+  </div>
+</div>
+
+<div id="serviceForm" class="card" style="display:none;max-width:720px;margin:35px auto 0">
+<h3 id="formTitle">Service Enquiry</h3>
+<form onsubmit="sendEnquiry(event)">
+<input id="service" type="hidden">
+<label>Full Name<br><input id="name" required placeholder="Your name"></label><br>
+<label>Mobile Number<br><input id="mobile" required placeholder="Your mobile number"></label><br>
+<label>Email Address<br><input id="email" type="email" placeholder="Your email"></label><br>
+<label>PAN / GSTIN / Business Name (optional)<br><input id="pan" placeholder="Enter if applicable"></label><br>
+<label>Details / Requirement<br><textarea id="details" rows="4" placeholder="Tell us what you need"></textarea></label><br>
+<button class="primary" type="submit">💬 Send to WhatsApp</button>
+<button class="secondary" type="button" onclick="sendEmail()">✉️ Send by Email</button>
+</form>
+<p style="font-size:13px;color:#667">Do not enter OTPs, passwords, bank PINs or other sensitive credentials.</p>
+</div>
+</section>
+
+<section id="wealth">
+<h2>Wealth & Financial Consultancy</h2><p class="lead">Plan your finances with a practical, goal-oriented approach.</p>
+<div class="grid">
+<div class="card"><div class="icon">📊</div><h3>Financial Planning</h3><p>Organize income, expenses, savings and long-term financial goals.</p></div>
+<div class="card"><div class="icon">💼</div><h3>Business Finance</h3><p>Financial planning and cash-flow guidance for businesses.</p></div>
+<div class="card"><div class="icon">🌱</div><h3>Wealth Guidance</h3><p>Goal-based wealth and retirement planning guidance.</p></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="contact-inner">
+<h2>Contact FINNISHTA</h2><p style="text-align:center;line-height:1.8">📍 Kachanayakanahalli, Near Congress Office, Hennagara,<br>Bangalore, Karnataka 560099</p>
+<p style="text-align:center;font-size:20px">📞 <a href="tel:08951954077">089519 54077</a> &nbsp; | &nbsp; 💬 <a href="https://wa.me/918951954077">WhatsApp</a></p>
+</div></section>
+</main>
+<footer class="footer">© 2026 FINNISHTA Wealth & Tax Consultancy. All rights reserved.</footer>
+
+<script>
+const WHATSAPP="918951954077";
+const BUSINESS_EMAIL="YOUR_EMAIL_HERE"; // Replace with your business email.
+
+function toggleServices(id, el){
+  const box=document.getElementById(id);
+  const isOpen=box.classList.contains('show');
+  document.querySelectorAll('.sub-services').forEach(x=>x.classList.remove('show'));
+  document.querySelectorAll('.main-service').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.main-service b').forEach(x=>x.textContent='＋');
+  if(!isOpen){
+    box.classList.add('show');
+    el.classList.add('open');
+    el.querySelector('b').textContent='−';
+  }
+}
+function openForm(service){
+  document.getElementById('serviceForm').style.display='block';
+  document.getElementById('service').value=service;
+  document.getElementById('formTitle').textContent=service+" – Enquiry";
+  document.getElementById('serviceForm').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function enquiryText(){
+  return `FINNISHTA SERVICE ENQUIRY\n\nService: ${document.getElementById('service').value}\nName: ${document.getElementById('name').value}\nMobile: ${document.getElementById('mobile').value}\nEmail: ${document.getElementById('email').value}\nPAN/GSTIN/Business Name: ${document.getElementById('pan').value}\nRequirement: ${document.getElementById('details').value}`;
+}
+function sendEnquiry(e){
+  e.preventDefault();
+  window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(enquiryText()),"_blank");
+}
+function sendEmail(){
+  const subject=document.getElementById('service').value+" enquiry - FINNISHTA";
+  window.location.href="mailto:"+BUSINESS_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(enquiryText());
+}
+</script>
+</body></html>
