@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finnistha Wealth & Tax Consultancy</title>
+<meta name="description" content="Finnistha Wealth & Tax Consultancy - GST, Income Tax, Accounting, Payroll and Business Compliance">
+<style>
+:root{--navy:#071d3b;--blue:#0a4b91;--blue2:#1475d1;--gold:#f4bd32;--bg:#f4f7fb;--ink:#172b4d;--muted:#64748b;--line:#e3eaf3;--green:#0b8f62}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}a{text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}.top{background:#04152c;color:#d8e7f6;font-size:12px;padding:8px 0}.top .container{display:flex;justify-content:space-between}
+header{background:rgba(7,29,59,.97);color:#fff;position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff14}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900;font-size:19px}.brandmark{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--gold),#ffe69b);color:var(--navy);display:grid;place-items:center}.brand small{display:block;color:#a9c6e4;font-size:9px;letter-spacing:1.4px}nav{display:flex;align-items:center;gap:23px}nav a{color:#d9e7f5;font-size:13px}nav a:hover{color:var(--gold)}.navcall{background:var(--gold);color:var(--navy);padding:10px 14px;border-radius:9px;font-weight:900}
+.hero{background:radial-gradient(circle at 90% 15%,#1264a7,transparent 34%),linear-gradient(135deg,#061a35,#0a4b91);color:#fff;overflow:hidden;padding:65px 0 48px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.badge{display:inline-block;border:1px solid #ffffff30;background:#ffffff12;border-radius:30px;padding:8px 13px;font-size:11px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.04;margin:20px 0}.gold{color:var(--gold)}.hero p{font-size:17px;color:#d7e6f5;max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:9px;font-weight:900}.btn.gold{background:var(--gold);color:var(--navy)}.btn.outline{border:1px solid #ffffff3d;color:#fff;background:#ffffff0d}.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:23px;color:#bcd2e8;font-size:12px}.trust b{color:#fff}
+.hero-card{background:#ffffff12;border:1px solid #ffffff2b;border-radius:23px;padding:23px;box-shadow:0 25px 60px #00000030}.hero-card h3{font-size:15px;margin-bottom:15px}.next{background:#fff;color:var(--ink);border-radius:16px;padding:19px;margin-bottom:12px}.next small{color:var(--muted);font-weight:800}.next h2{font-size:25px;color:var(--blue);margin:4px 0}.count{display:flex;gap:8px}.unit{background:#edf4fc;border-radius:8px;padding:7px 10px;text-align:center;min-width:54px}.unit b{display:block;font-size:17px}.unit span{font-size:8px;color:var(--muted)}.mini{display:grid;gap:8px}.mini div{display:flex;justify-content:space-between;background:#ffffff0d;padding:9px 11px;border-radius:8px;font-size:12px}.mini b{color:var(--gold)}
+.deadline-strip{margin-top:40px;overflow:hidden}.strip-title{font-size:14px;font-weight:800;margin-bottom:10px}.track{display:flex;gap:12px;width:max-content;animation:move 20s linear infinite}.due{width:210px;background:#fff;color:var(--ink);border-top:4px solid var(--gold);border-radius:13px;padding:13px;box-shadow:0 8px 25px #0002}.due b{color:var(--blue);font-size:13px}.due strong{display:block;font-size:20px}.due small{font-size:10px;color:var(--muted)}
+@keyframes move{0%{transform:translateX(0)}45%{transform:translateX(-420px)}50%{transform:translateX(-420px)}95%{transform:translateX(0)}100%{transform:translateX(0)}}
+
+.section{padding:72px 0}.head{text-align:center;max-width:760px;margin:0 auto 35px}.eyebrow{font-size:11px;color:var(--blue2);font-weight:900;letter-spacing:1.5px}.head h2{font-size:40px;margin:5px 0}.head p{color:var(--muted)}
+.slider-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 12px 40px #14325a12}.slider-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.slider-title h3{color:var(--blue);font-size:20px}.hint{font-size:11px;color:var(--muted)}
+.slider-window{overflow:hidden;position:relative}.slider{display:flex;gap:13px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding:3px 2px 10px}.slider::-webkit-scrollbar{display:none}
+.slide-card{flex:0 0 190px;background:#f5f8fc;border:1px solid var(--line);border-radius:14px;padding:17px;cursor:pointer;transition:.2s}.slide-card:hover{transform:translateY(-4px);border-color:#9bc2e8}.slide-card.active{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 10px 25px #0a4b9130}.slide-card .ico{font-size:24px;margin-bottom:9px}.slide-card h4{font-size:14px}.slide-card p{font-size:11px;color:var(--muted);margin-top:5px}.slide-card.active p{color:#d7e8f8}
+.slider-arrows{display:flex;gap:7px}.arrow{border:1px solid var(--line);background:#fff;width:34px;height:34px;border-radius:8px;cursor:pointer;color:var(--blue);font-weight:900}.arrow:hover{background:#edf5ff}
+.sub-area,.doc-area{margin-top:25px;display:none}.sub-area.show,.doc-area.show{display:block;animation:fade .3s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sub-area{border-top:1px dashed #cbd8e6;padding-top:23px}.doc-area{border-top:1px dashed #cbd8e6;padding-top:25px}.doc-head{display:flex;justify-content:space-between;align-items:center;gap:15px}.doc-head h3{color:var(--blue);font-size:25px}.back{font-size:11px;color:var(--blue2);font-weight:900;cursor:pointer}
+.doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}.doc-card{background:#f6f9fd;border:1px solid var(--line);border-radius:15px;padding:19px}.doc-card h4{margin-bottom:10px}.list{list-style:none;display:grid;gap:7px}.list li{font-size:12px;background:#fff;border-radius:8px;padding:9px}.list li:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}.process{margin-top:18px}.chip{display:inline-block;background:#eaf3fd;color:var(--blue);font-size:11px;font-weight:800;border-radius:20px;padding:8px 11px;margin:3px}
+.note{margin-top:15px;padding:12px 14px;background:#fff8df;border-left:4px solid var(--gold);border-radius:8px;font-size:11px;color:#6a5720}
+.calendar{background:var(--navy);color:#fff}.calendar .head p{color:#b9cce0}.calendar .head h2{color:#fff}.due-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cal{background:#102f54;border:1px solid #285076;border-radius:13px;padding:16px}.cal b{color:var(--gold);font-size:12px}.cal strong{display:block;font-size:20px;margin:4px 0}.cal p{font-size:11px;color:#c5d4e4}
+.cta{background:linear-gradient(135deg,#0a4b91,#071d3b);color:#fff;text-align:center;padding:70px 0}.cta h2{font-size:39px}.cta p{color:#c6d8ea;margin:10px auto 22px;max-width:650px}
+footer{background:#04152c;color:#9fb5cd;padding:25px 0;font-size:11px}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.phone{color:var(--gold);font-weight:900}
+@media(max-width:950px){nav{display:none}.hero-grid{grid-template-columns:1fr}.due-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.top{display:none}.nav{height:64px}.brand{font-size:15px}.hero{padding:48px 0 38px}.hero p{font-size:15px}.hero-card{margin-top:8px}.deadline-strip{margin-top:28px}.due{width:190px}.track{animation-duration:15s}.section{padding:55px 0}.head h2{font-size:30px}.slider-box{padding:15px}.slide-card{flex-basis:165px}.doc-grid{grid-template-columns:1fr}.due-grid{grid-template-columns:1fr 1fr}.cta h2{font-size:30px}}
+
+/* MOBILE VIEW FIX — keeps the entire page inside the phone viewport */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+.container{min-width:0}
+.hero-grid,.hero-grid>div,.hero-card,.section,.slider-box{min-width:0;max-width:100%}
+h1{overflow-wrap:anywhere;word-break:normal}
+.hero p{overflow-wrap:anywhere}
+.trust{overflow:hidden}
+.deadline-strip{width:100%;min-width:0;overflow:hidden}
+.track{max-width:none}
+@media(max-width:650px){
+  .container{width:calc(100% - 32px)}
+  .hero-grid{display:block}
+  .hero-grid>div{width:100%}
+  h1{font-size:clamp(34px,10vw,46px);line-height:1.08;margin:18px 0}
+  .hero p{font-size:15px;line-height:1.55}
+  .actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:9px}
+  .actions .btn{width:100%;padding:13px 8px;font-size:13px}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 14px;line-height:1.5}
+  .trust span{white-space:nowrap}
+  .deadline-strip{margin-top:28px}
+  .track{animation-duration:22s}
+  .due{flex:0 0 210px;width:210px}
+  .hero-card{margin-top:28px;width:100%}
+  .slider-box{width:100%;overflow:hidden}
+  .slider{width:100%;max-width:100%;touch-action:pan-x}
+  .slide-card{flex:0 0 165px;min-width:0}
+  .doc-grid{min-width:0}
+  .doc-card{min-width:0;overflow-wrap:anywhere}
+}
+
+</style>
+</head>
+<body>
+
+<div class="top"><div class="container"><span>Professional Tax • GST • Accounting • Compliance</span><span>📞 08951954077</span></div></div>
+<header><div class="container nav">
+<a class="brand" href="#home"><span class="brandmark">FW</span><span>Finnistha<small>WEALTH & TAX CONSULTANCY</small></span></a>
+<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#deadlines">Due Dates</a><a href="#contact">Contact</a><a class="navcall" href="tel:08951954077">Call Now</a></nav>
+</div></header>
+
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<span class="badge">TAX • GST • ACCOUNTING • COMPLIANCE</span>
+<h1>Smart Finance. <span class="gold">Clear Compliance.</span> Better Business.</h1>
+<p>Finnistha Wealth & Tax Consultancy provides practical support for GST, Income Tax, accounting, payroll, registrations, notices and business documentation.</p>
+<div class="actions">
+<a class="btn gold" href="tel:08951954077">📞 Call Now</a>
+<a class="btn outline" href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services." target="_blank" rel="noopener">💬 WhatsApp</a>
+<a class="btn outline" href="mailto:finnistha@gmail.com?subject=Enquiry%20-%20Finnistha%20Wealth%20%26%20Tax%20Consultancy">✉️ Email Us</a>
+<a class="btn outline" href="#services">Explore Services</a>
+</div>
+<div class="trust"><span>✓ GST & Tax</span><span>✓ Accounting</span><span>✓ Payroll</span><span>✓ Business Compliance</span></div>
+<div class="deadline-strip"><div class="strip-title">Important Filing & Payment Dates</div><div class="track">
+<div class="due"><b>TDS PAYMENT</b><strong>7th</strong><small>Generally following month</small></div>
+<div class="due"><b>GST GSTR-1</b><strong>11th</strong><small>Monthly filers</small></div>
+<div class="due"><b>PF / ESI</b><strong>15th</strong><small>Common monthly reference</small></div>
+<div class="due"><b>GST GSTR-3B</b><strong>20th</strong><small>Monthly filers</small></div>
+<div class="due"><b>ADVANCE TAX</b><strong>15 Jun / Sep / Dec / Mar</strong><small>Quarterly instalments</small></div>
+<div class="due"><b>TDS RETURNS</b><strong>31 Jul / Oct / Jan / May</strong><small>Quarterly statements</small></div>
+</div></div>
+</div>
+<div class="hero-card">
+<h3>📅 Compliance Countdown</h3>
+<div class="next"><small>NEXT STANDARD DUE DATE</small><h2 id="nextTitle">Checking...</h2><div class="count" id="count"></div></div>
+<div class="mini"><div><span>GST GSTR-1</span><b>11th</b></div><div><span>GST GSTR-3B</span><b>20th</b></div><div><span>TDS Payment</span><b>7th</b></div><div><span>PF / ESI</span><b>15th</b></div></div>
+</div>
+</div></section>
+
+<section class="section" id="services"><div class="container">
+<div class="head"><span class="eyebrow">INTERACTIVE SERVICES</span><h2>Choose a Service</h2><p>Click a main service → choose a sub-service → view the exact client requirements and documents.</p></div>
+
+<div class="slider-box">
+<div class="slider-title"><h3>1. Main Services</h3><div class="slider-arrows"><button class="arrow" onclick="scrollSlider('mainSlider',-350)">‹</button><button class="arrow" onclick="scrollSlider('mainSlider',350)">›</button></div></div>
+<div class="slider" id="mainSlider"></div>
+
+<div class="sub-area" id="subArea">
+<div class="slider-title"><h3>2. Sub-Services: <span id="selectedMain"></span></h3><div class="slider-arrows"><button class="arrow" onclick="scrollSlider('subSlider',-300)">‹</button><button class="arrow" onclick="scrollSlider('subSlider',300)">›</button></div></div>
+<div class="slider" id="subSlider"></div>
+</div>
+
+<div class="doc-area" id="docArea">
+<div class="doc-head"><h3 id="docTitle"></h3><span class="back" onclick="closeDocs()">← Choose another sub-service</span></div>
+<p id="docIntro" style="color:var(--muted);font-size:13px;margin-top:5px"></p>
+<div class="doc-grid"><div class="doc-card"><h4>📋 Client Requirements</h4><ul class="list" id="reqList"></ul></div><div class="doc-card"><h4>📄 Documents / Data Required</h4><ul class="list" id="docList"></ul></div></div>
+<div class="doc-card process"><h4>🔄 Process</h4><div id="process"></div></div>
+<div class="note" id="dueNote"></div>
+<div style="margin-top:18px"><a class="btn" style="background:var(--blue);color:#fff" href="tel:08951954077">📞 Discuss / Send Documents</a></div>
+</div>
+</div>
+</div></section>
+
+<section class="section calendar" id="deadlines"><div class="container">
+<div class="head"><span class="eyebrow" style="color:var(--gold)">COMPLIANCE CALENDAR</span><h2>Important Payment & Filing Due Dates</h2><p>Standard reference dates. Government notifications, taxpayer category and filing frequency can change the applicable date.</p></div>
+<div class="due-grid">
+<div class="cal"><b>TDS PAYMENT</b><strong>7th</strong><p>Generally by 7th of following month; March has a separate deadline.</p></div>
+<div class="cal"><b>GST GSTR-1</b><strong>11th</strong><p>Monthly filers. Quarterly filers generally have a different due date.</p></div>
+<div class="cal"><b>PF / ESI</b><strong>15th</strong><p>Common monthly reference; verify portal-generated due date.</p></div>
+<div class="cal"><b>GST GSTR-3B</b><strong>20th</strong><p>Monthly filers; QRMP dates can differ by State/category.</p></div>
+<div class="cal"><b>ADVANCE TAX</b><strong>15 Jun / Sep / Dec / Mar</strong><p>Quarterly cumulative instalments.</p></div>
+<div class="cal"><b>TDS RETURNS</b><strong>31 Jul / Oct / Jan / May</strong><p>Quarterly statement framework, subject to applicable rules.</p></div>
+<div class="cal"><b>GSTR-2B</b><strong>14th</strong><p>Generally generated on the 14th of the succeeding month.</p></div>
+<div class="cal"><b>ITR</b><strong>Annual</strong><p>Due date depends on taxpayer category and applicable assessment year.</p></div>
+<div class="cal"><b>AUDIT REPORT</b><strong>Annual</strong><p>Applicable businesses should follow the notified assessment-year deadline.</p></div>
+<div class="cal"><b>GST ANNUAL RETURN</b><strong>31 Dec*</strong><p>Generally for applicable taxpayers; verify turnover/category.</p></div>
+</div></div></section>
+
+<section class="cta" id="contact"><div class="container">
+<h2>Need Professional Tax & Compliance Support?</h2>
+<p>Choose your service above, check the exact document checklist and contact Finnistha for assistance.</p>
+<div class="actions" style="justify-content:center">
+<a class="btn gold" href="tel:08951954077">📞 08951954077</a>
+<a class="btn outline" href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services." target="_blank" rel="noopener">💬 WhatsApp</a>
+<a class="btn outline" href="mailto:finnistha@gmail.com?subject=Enquiry%20-%20Finnistha%20Wealth%20%26%20Tax%20Consultancy">✉️ finnistha@gmail.com</a>
+</div>
+</div></section>
+<footer><div class="container foot">
+<span>© 2026 Finnistha Wealth & Tax Consultancy</span>
+<span>Tax • GST • Accounting • Compliance</span>
+<span><a href="https://wa.me/918951954077" target="_blank" rel="noopener" style="color:#9fb5cd">WhatsApp</a> • <a href="mailto:finnistha@gmail.com" style="color:#9fb5cd">Email</a> • <a href="tel:08951954077" class="phone">08951954077</a></span>
+</div></footer>
+
+<script>
+const services={
+gst:{name:"GST Services",icon:"🧾",desc:"GST registration, returns and compliance.",subs:{
+reg:{n:"GST Registration",i:"📝",d:"New GST registration for eligible businesses.",r:["Confirm business constitution and activity","Provide principal business address","Confirm authorised signatory"],docs:["PAN","Aadhaar","Photo","Mobile & email","Business address proof","Rent agreement/ownership proof where applicable","Bank proof","Business constitution documents"],p:["Document verification","Application preparation","Portal submission","ARN tracking","GST certificate"],due:"Due date: Registration timelines depend on liability/notification. We will confirm the applicable requirement."},
+gstr1:{n:"GSTR-1 Filing",i:"📤",d:"Sales/outward-supply return preparation and filing.",r:["Share complete sales data for the tax period","Confirm B2B/B2C/export/credit-note details","Review draft before filing"],docs:["Sales register","Tax invoices","Credit/debit notes","Export documents if applicable","Previous GSTR-1","E-invoice data where applicable"],p:["Data collection","Invoice validation","Return preparation","Client review","Filing & ARN"],due:"Standard monthly GSTR-1 due date: 11th. Quarterly filers generally have a different due date."},
+gstr3b:{n:"GSTR-3B Filing",i:"📊",d:"Summary GST return, liability and ITC reporting.",r:["Confirm sales and purchase data","Review ITC reconciliation","Confirm tax payable and payment"],docs:["Sales register","Purchase register","GSTR-2B","GSTR-1 data","RCM details","Credit/debit notes","Electronic cash/credit ledger"],p:["Reconcile","Compute liability","Prepare GSTR-3B","Tax payment","File return"],due:"Standard monthly GSTR-3B due date: 20th for monthly filers; QRMP dates can differ."},
+recon:{n:"GSTR-2B / ITC Reconciliation",i:"🔎",d:"Purchase register versus GSTR-2B reconciliation.",r:["Provide purchase register","Provide GSTR-2B","Identify missing/ineligible ITC"],docs:["Purchase register","GSTR-2B","Supplier invoices","Debit/credit notes","Previous reconciliation"],p:["Import data","Match invoices","Identify differences","Review with client","Final ITC working"],due:"GSTR-2B is generally generated on the 14th of the succeeding month."},
+amend:{n:"GST Amendment",i:"✏️",d:"Change eligible GST registration details.",r:["Identify fields to be changed","Provide supporting proof","Confirm authorised signatory"],docs:["Existing GST certificate","Updated address proof","Updated bank proof","Constitution/change documents","Authorisation"],p:["Check change","Prepare amendment","Upload proof","Submit","Track approval"],due:"Processing depends on amendment type and portal/department action."},
+cancel:{n:"GST Cancellation / Revocation",i:"🛑",d:"Cancellation or restoration-related support.",r:["Explain reason/status","Provide pending return details","Confirm tax/interest/late fee position"],docs:["GST registration","Pending return details","Tax payment/challan","Notice/order if any","Business closure/change proof where applicable"],p:["Status review","Return/payment review","Application/reply","Track portal action","Closure/revocation confirmation"],due:"Time limits can apply. Notice/order date and applicable rules must be checked before filing."},
+notice:{n:"GST Notice Reply",i:"⚖️",d:"Document review and response support for GST notices.",r:["Share complete notice","Share relevant return/transaction records","Confirm response deadline"],docs:["Notice/order PDF","GST returns","Invoices","Ledgers","Bank proof","Reconciliation","Previous replies/orders"],p:["Notice analysis","Evidence collection","Draft response","Client approval","Submission support"],due:"Notice-specific response deadline shown in the notice must be followed."}
+}},
+itr:{name:"Income Tax & ITR",icon:"💰",desc:"ITR filing and tax compliance.",subs:{
+salary:{n:"Salary ITR",i:"👤",d:"ITR filing for salaried individuals.",r:["Confirm residential status","Review income and deductions","Confirm bank account"],docs:["PAN","Aadhaar","Form 16","AIS/TIS","26AS","Bank statements","Investment/deduction proofs","Capital gains statements if any"],p:["Collect","AIS/26AS review","Tax computation","ITR preparation","E-verify"],due:"ITR due date depends on assessment year and taxpayer category; confirm the applicable notified date."},
+business:{n:"Business ITR",i:"🏢",d:"ITR support for proprietors and businesses.",r:["Confirm turnover and business nature","Provide complete books","Confirm audit applicability"],docs:["PAN","GST returns","Sales/purchase register","Bank statements","P&L","Balance sheet","Fixed asset details","Loan statements"],p:["Books review","Tax computation","Financial statements","ITR preparation","E-verify"],due:"Business ITR deadline depends on audit status and assessment-year notification."},
+capital:{n:"Capital Gains",i:"📈",d:"Capital gain computation and return support.",r:["Provide transaction details","Confirm holding periods","Share acquisition cost"],docs:["Broker statement","Contract notes","Purchase/sale deeds","Cost details","Dividend/interest statements"],p:["Transaction review","Gain calculation","Tax computation","ITR preparation","Verification"],due:"Reported in applicable ITR for the relevant assessment year."},
+notice:{n:"Income Tax Notice",i:"⚖️",d:"Support for reviewing and responding to income-tax communications.",r:["Share complete notice","Confirm response deadline","Provide relevant return/data"],docs:["Notice PDF","ITR acknowledgement","AIS/TIS","26AS","Bank statements","Supporting proofs","Previous communication"],p:["Notice review","Issue identification","Evidence collection","Draft reply","Submission support"],due:"Follow the response date stated in the notice/order."}
+}},
+accounting:{name:"Accounting & Bookkeeping",icon:"📊",desc:"Books, reconciliation and financial statements.",subs:{
+monthly:{n:"Monthly Bookkeeping",i:"📚",d:"Regular accounting and ledger maintenance.",r:["Share monthly transaction data","Provide opening balances","Confirm accounting period"],docs:["Sales invoices","Purchase bills","Expense bills","Bank statements","Cash book","GST returns","Loan statements"],p:["Data collection","Accounting entry","Ledger review","Reconciliation","Monthly report"],due:"Monthly service schedule can be agreed with the client."},
+bank:{n:"Bank Reconciliation",i:"🏦",d:"Bank book versus bank statement reconciliation.",r:["Share bank statements","Provide cash/book balance","Clarify unmatched transactions"],docs:["Bank statements","Cash book","Bank ledger","Payment receipts","Deposit records"],p:["Import","Match","Identify differences","Client clarification","Final reconciliation"],due:"Recommended monthly for accurate books."},
+financial:{n:"P&L & Balance Sheet",i:"📑",d:"Preparation of financial statements.",r:["Complete books","Confirm year-end adjustments","Provide asset/liability details"],docs:["Trial balance","Ledgers","Bank reconciliation","Stock details","Fixed asset register","Loan statements","Debtor/creditor lists"],p:["Review TB","Adjustments","P&L","Balance sheet","Final review"],due:"Prepared as per agreed accounting period and statutory requirement."}
+}},
+payroll:{name:"PF • ESI • Payroll",icon:"👥",desc:"Payroll and statutory compliance.",subs:{
+pf:{n:"PF Return / Payment",i:"🧑‍💼",d:"PF contribution and return support.",r:["Confirm employee master","Share salary/attendance","Confirm joining/exits"],docs:["UAN details","Employee master","Salary sheet","Attendance","Previous challan/return","Join/exit details"],p:["Payroll calculation","Contribution check","ECR/challan","Payment","Return confirmation"],due:"Common PF payment reference: generally by 15th of following month."},
+esi:{n:"ESI Return / Payment",i:"🏥",d:"ESI contribution and compliance support.",r:["Confirm employee details","Share wages/attendance","Confirm join/exit changes"],docs:["ESI registration","Employee details","Salary sheet","Attendance","Previous challan","Join/exit data"],p:["Calculate","Review","Challan","Payment","Return/record"],due:"Common ESI payment reference: generally by 15th of following month."},
+payroll:{n:"Monthly Payroll",i:"💼",d:"Salary calculation and payroll documentation.",r:["Share attendance","Confirm salary structure","Confirm deductions"],docs:["Employee master","Attendance","Salary structure","PF/ESI details","TDS declarations where applicable","Bank salary file"],p:["Attendance review","Gross/net calculation","Statutory deductions","Payslips","Bank file"],due:"Monthly payroll date is set by employer; statutory dates apply separately."}
+}},
+business:{name:"Business Registration",icon:"🏢",desc:"Business registration and setup.",subs:{
+udyam:{n:"MSME / Udyam Registration",i:"🏭",d:"Udyam registration support.",r:["Confirm enterprise details","Provide Aadhaar/PAN details","Confirm business activity"],docs:["Aadhaar","PAN","Business name","Address","Bank details","NIC/activity information"],p:["Verify","Prepare","Submit","Generate certificate","Share"],due:"Registration is online; no recurring monthly filing due date for the certificate itself."},
+shop:{n:"Shop & Establishment",i:"🏪",d:"Shop and Establishment registration support.",r:["Confirm establishment details","Confirm employee count","Provide address proof"],docs:["Owner ID","PAN","Address proof","Rent/ownership proof","Employee details","Business details"],p:["Collect","Prepare","Submit","Track","Certificate"],due:"State-specific requirements and renewals may apply."}
+}},
+pan:{name:"PAN Services",icon:"🪪",desc:"PAN application and correction.",subs:{
+newpan:{n:"New PAN",i:"🪪",d:"New PAN application assistance.",r:["Confirm applicant type","Verify name/DOB/address","Provide supporting proof"],docs:["Identity proof","DOB proof","Address proof","Photo/signature where applicable"],p:["Verify","Prepare","Submit","Track","PAN details"],due:"Processing time depends on application and department processing."},
+correction:{n:"PAN Correction",i:"✏️",d:"Correction of PAN details.",r:["Identify incorrect field","Provide correct supporting proof","Confirm existing PAN"],docs:["Existing PAN","Aadhaar/ID","DOB proof","Address proof","Supporting correction document"],p:["Review","Prepare correction","Submit","Track","Updated PAN"],due:"Processing time varies."}
+}},
+loans:{name:"Loan Assistance",icon:"🏦",desc:"Business and personal loan documentation.",subs:{
+business:{n:"Business Loan",i:"🏦",d:"Business loan application documentation.",r:["Confirm loan requirement","Provide business and income data","Confirm lender requirements"],docs:["PAN/Aadhaar","ITR","GST returns","Bank statements","P&L","Balance sheet","Business proof","Existing loan statements"],p:["Requirement assessment","Financial review","Document pack","Application support","Follow-up"],due:"Lender-specific timeline and document requirements apply."},
+personal:{n:"Personal Loan",i:"💳",d:"Personal loan documentation support.",r:["Confirm employment/income","Confirm requested amount","Provide lender-specific KYC"],docs:["PAN","Aadhaar","Salary slips","Bank statements","Form 16/ITR","Address proof"],p:["Eligibility/document check","Application","Verification","Lender processing","Follow-up"],due:"Lender-specific timeline applies."}
+}},
+compliance:{name:"Notice & Compliance",icon:"⚖️",desc:"Notice review and response support.",subs:{
+gstnotice:{n:"GST Notice",i:"⚖️",d:"GST notice response support.",r:["Share complete notice","Confirm deadline","Provide related return/data"],docs:["Notice/order","GST returns","Invoices","Ledgers","Bank proof","Previous replies"],p:["Review","Evidence","Draft","Client approval","Submission support"],due:"Use the response deadline printed in the notice."},
+itnotice:{n:"Income Tax Notice",i:"📩",d:"Income Tax notice response support.",r:["Share notice","Confirm deadline","Provide relevant return/data"],docs:["Notice","ITR acknowledgement","AIS/TIS","26AS","Bank statements","Supporting evidence"],p:["Review","Evidence","Draft","Approval","Submission support"],due:"Use the response deadline printed in the notice."}
+}}
+};
+
+const mainSlider=document.getElementById("mainSlider"),subSlider=document.getElementById("subSlider");
+Object.entries(services).forEach(([key,s],i)=>{let c=document.createElement("div");c.className="slide-card";c.innerHTML=`<div class="ico">${s.icon}</div><h4>${s.name}</h4><p>${s.desc}</p>`;c.onclick=()=>selectMain(key,c);mainSlider.appendChild(c);if(i===0)selectMain(key,c)});
+
+function selectMain(key,el){document.querySelectorAll("#mainSlider .slide-card").forEach(x=>x.classList.remove("active"));el.classList.add("active");document.getElementById("selectedMain").textContent=services[key].name;subSlider.innerHTML="";Object.entries(services[key].subs).forEach(([sk,s])=>{let c=document.createElement("div");c.className="slide-card";c.innerHTML=`<div class="ico">${s.i}</div><h4>${s.n}</h4><p>${s.d}</p>`;c.onclick=()=>selectSub(key,sk,c);subSlider.appendChild(c)});document.getElementById("subArea").classList.add("show");document.getElementById("docArea").classList.remove("show");subSlider.scrollLeft=0}
+
+function selectSub(m,s,el){document.querySelectorAll("#subSlider .slide-card").forEach(x=>x.classList.remove("active"));el.classList.add("active");const d=services[m].subs[s];document.getElementById("docTitle").textContent=d.n;document.getElementById("docIntro").textContent=d.d;document.getElementById("reqList").innerHTML=d.r.map(x=>`<li>${x}</li>`).join("");document.getElementById("docList").innerHTML=d.docs.map(x=>`<li>${x}</li>`).join("");document.getElementById("process").innerHTML=d.p.map(x=>`<span class="chip">${x}</span>`).join("");document.getElementById("dueNote").textContent="⏰ "+d.due;document.getElementById("docArea").classList.add("show");setTimeout(()=>document.getElementById("docArea").scrollIntoView({behavior:"smooth",block:"nearest"}),50)}
+function closeDocs(){document.getElementById("docArea").classList.remove("show");document.querySelectorAll("#subSlider .slide-card").forEach(x=>x.classList.remove("active"))}
+function scrollSlider(id,amount){document.getElementById(id).scrollBy({left:amount,behavior:"smooth"})}
+
+function nextDate(day){let n=new Date(),d=new Date(n.getFullYear(),n.getMonth(),day);if(d<=n)d=new Date(n.getFullYear(),n.getMonth()+1,day);return d}
+function countdown(){let now=new Date(),arr=[["TDS Payment",7],["GST GSTR-1",11],["PF / ESI",15],["GST GSTR-3B",20]].map(x=>({name:x[0],d:nextDate(x[1])})).sort((a,b)=>a.d-b.d),n=arr[0],ms=n.d-now,days=Math.floor(ms/86400000),hrs=Math.floor(ms/3600000)%24,mins=Math.floor(ms/60000)%60;document.getElementById("nextTitle").textContent=n.name+" • "+n.d.toLocaleDateString("en-IN",{day:"2-digit",month:"short"});document.getElementById("count").innerHTML=`<div class="unit"><b>${days}</b><span>DAYS</span></div><div class="unit"><b>${hrs}</b><span>HOURS</span></div><div class="unit"><b>${mins}</b><span>MIN</span></div>`}
+countdown();setInterval(countdown,60000);
+</script>
+</body>
+</html>
