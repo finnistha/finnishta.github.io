@@ -1,24 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Finnistha Wealth & Tax Consultancy</title>
-<meta name="description" content="Finnistha Wealth & Tax Consultancy - GST, Income Tax, Accounting, Payroll and Business Compliance">
+
+<meta name="description" content="Finnistha Wealth & Tax Consultancy - GST, Income Tax, Accounting, PF, ESI, Business Registration, PAN and Loan Services.">
 
 <style>
+
 :root{
 --navy:#071d3b;
 --blue:#0a4b91;
 --blue2:#1475d1;
 --gold:#f4bd32;
 --bg:#f4f7fb;
+--white:#ffffff;
 --ink:#172b4d;
 --muted:#64748b;
 --line:#e3eaf3;
 --green:#0b8f62;
---white:#ffffff;
+--red:#d93025;
+--shadow:0 10px 30px rgba(7,29,59,.10);
 }
 
 *{
@@ -32,17 +36,15 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Inter,Segoe UI,Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:var(--bg);
 color:var(--ink);
-line-height:1.5;
-width:100%;
-max-width:100%;
-overflow-x:hidden;
+line-height:1.6;
 }
 
 a{
 text-decoration:none;
+color:inherit;
 }
 
 button{
@@ -52,675 +54,692 @@ font-family:inherit;
 .container{
 width:min(1180px,92%);
 margin:auto;
-min-width:0;
 }
 
 /* TOP BAR */
 
-.top{
-background:#04152c;
-color:#d8e7f6;
-font-size:12px;
-padding:8px 0;
+.topbar{
+background:var(--navy);
+color:white;
+padding:9px 0;
+font-size:14px;
 }
 
-.top .container{
+.topbar-inner{
 display:flex;
 justify-content:space-between;
+align-items:center;
 gap:15px;
+}
+
+.topbar a{
+color:white;
+}
+
+.topbar-right{
+display:flex;
+gap:18px;
 }
 
 /* HEADER */
 
 header{
-background:rgba(7,29,59,.98);
-color:#fff;
+background:white;
 position:sticky;
 top:0;
 z-index:1000;
-backdrop-filter:blur(12px);
-border-bottom:1px solid #ffffff14;
+box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 .nav{
-height:72px;
+min-height:76px;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:20px;
 }
 
-.brand{
+.logo{
 display:flex;
 align-items:center;
-gap:10px;
-color:#fff;
-font-weight:900;
-font-size:19px;
+gap:12px;
 }
 
-.brandmark{
-width:40px;
-height:40px;
-border-radius:11px;
-background:linear-gradient(135deg,var(--gold),#ffe69b);
+.logo-icon{
+width:48px;
+height:48px;
+border-radius:12px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:23px;
+font-weight:bold;
+}
+
+.logo-text h1{
+font-size:21px;
 color:var(--navy);
-display:grid;
-place-items:center;
-font-size:13px;
+line-height:1.1;
 }
 
-.brand small{
-display:block;
-color:#a9c6e4;
-font-size:9px;
-letter-spacing:1.4px;
+.logo-text span{
+font-size:12px;
+color:var(--muted);
 }
 
-nav{
+.nav-links{
 display:flex;
+gap:22px;
 align-items:center;
-gap:23px;
 }
 
-nav a{
-color:#d9e7f5;
-font-size:13px;
+.nav-links a{
+font-weight:600;
+font-size:14px;
 }
 
-nav a:hover{
-color:var(--gold);
+.nav-links a:hover{
+color:var(--blue2);
 }
 
-.navcall{
-background:var(--gold);
-color:var(--navy)!important;
-padding:10px 14px;
+.nav-btn{
+background:var(--blue);
+color:white!important;
+padding:10px 17px;
 border-radius:9px;
-font-weight:900;
 }
 
 /* HERO */
 
 .hero{
 background:
-radial-gradient(circle at 90% 15%,#1264a7,transparent 34%),
-linear-gradient(135deg,#061a35,#0a4b91);
-color:#fff;
-overflow:hidden;
-padding:65px 0 48px;
+linear-gradient(120deg,rgba(7,29,59,.96),rgba(10,75,145,.92)),
+radial-gradient(circle at top right,#1475d1,transparent 40%);
+color:white;
+padding:75px 0 65px;
 }
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:50px;
+grid-template-columns:1.25fr .75fr;
+gap:45px;
 align-items:center;
-min-width:0;
 }
 
 .badge{
 display:inline-block;
-border:1px solid #ffffff30;
-background:#ffffff12;
+background:rgba(244,189,50,.15);
+border:1px solid rgba(244,189,50,.5);
+color:#ffd76a;
+padding:7px 13px;
 border-radius:30px;
-padding:8px 13px;
-font-size:11px;
-font-weight:800;
-letter-spacing:1px;
+font-size:13px;
+font-weight:bold;
+margin-bottom:18px;
 }
 
-h1{
-font-size:clamp(38px,5vw,62px);
-line-height:1.04;
-margin:20px 0;
-overflow-wrap:anywhere;
+.hero h2{
+font-size:clamp(34px,5vw,60px);
+line-height:1.08;
+margin-bottom:18px;
 }
 
-.gold{
+.hero h2 span{
 color:var(--gold);
 }
 
 .hero p{
-font-size:17px;
-color:#d7e6f5;
+font-size:18px;
 max-width:680px;
+color:#dce9f8;
 }
 
-.actions{
+.hero-buttons{
 display:flex;
-gap:12px;
 flex-wrap:wrap;
-margin-top:26px;
+gap:12px;
+margin-top:28px;
 }
 
 .btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-padding:13px 18px;
-border-radius:9px;
-font-weight:900;
-border:none;
+gap:8px;
+padding:13px 20px;
+border-radius:10px;
+font-weight:bold;
+border:1px solid transparent;
 cursor:pointer;
-}
-
-.btn.gold{
-background:var(--gold);
-color:var(--navy);
-}
-
-.btn.outline{
-border:1px solid #ffffff3d;
-color:#fff;
-background:#ffffff0d;
+transition:.2s;
 }
 
 .btn:hover{
-transform:translateY(-1px);
+transform:translateY(-2px);
 }
 
-.trust{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-margin-top:23px;
-color:#bcd2e8;
-font-size:12px;
+.btn-primary{
+background:var(--gold);
+color:#172b4d;
 }
 
-.trust b{
-color:#fff;
+.btn-outline{
+border-color:rgba(255,255,255,.45);
+color:white;
+background:rgba(255,255,255,.06);
 }
-
-/* HERO CARD */
 
 .hero-card{
-background:#ffffff12;
-border:1px solid #ffffff2b;
-border-radius:23px;
-padding:23px;
-box-shadow:0 25px 60px #00000030;
-min-width:0;
+background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.18);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
 }
 
 .hero-card h3{
-font-size:15px;
-margin-bottom:15px;
+margin-bottom:16px;
 }
 
-.next{
-background:#fff;
-color:var(--ink);
-border-radius:16px;
-padding:19px;
-margin-bottom:12px;
-}
-
-.next small{
-color:var(--muted);
-font-weight:800;
-}
-
-.next h2{
-font-size:25px;
-color:var(--blue);
-margin:4px 0;
-}
-
-.count{
+.hero-point{
 display:flex;
-gap:8px;
-flex-wrap:wrap;
+gap:10px;
+margin:12px 0;
+color:#e8f2ff;
 }
 
-.unit{
-background:#edf4fc;
-border-radius:8px;
-padding:7px 10px;
-text-align:center;
-min-width:54px;
-}
-
-.unit b{
-display:block;
-font-size:17px;
-}
-
-.unit span{
-font-size:8px;
-color:var(--muted);
-}
-
-.mini{
-display:grid;
-gap:8px;
-}
-
-.mini div{
-display:flex;
-justify-content:space-between;
-background:#ffffff0d;
-padding:9px 11px;
-border-radius:8px;
-font-size:12px;
-}
-
-.mini b{
+.hero-point b{
 color:var(--gold);
 }
 
-/* DUE DATE MOVING STRIP */
+/* DUE DATE TICKER */
 
-.deadline-strip{
-margin-top:40px;
+.due-strip{
+background:var(--gold);
+color:var(--navy);
 overflow:hidden;
-width:100%;
+white-space:nowrap;
+font-weight:bold;
 }
 
-.strip-title{
-font-size:14px;
-font-weight:800;
-margin-bottom:10px;
+.due-track{
+display:inline-block;
+padding:12px 0;
+animation:moveText 30s linear infinite;
 }
 
-.track{
+.due-track span{
+margin-right:70px;
+}
+
+@keyframes moveText{
+0%{transform:translateX(100%)}
+100%{transform:translateX(-100%)}
+}
+
+/* COUNTDOWN */
+
+.countdown{
+padding:35px 0;
+background:white;
+}
+
+.countdown-box{
+background:linear-gradient(135deg,#071d3b,#0a4b91);
+border-radius:18px;
+color:white;
+padding:25px;
 display:flex;
-gap:12px;
-width:max-content;
-animation:move 25s linear infinite;
-}
-
-.due{
-width:210px;
-flex:0 0 210px;
-background:#fff;
-color:var(--ink);
-border-top:4px solid var(--gold);
-border-radius:13px;
-padding:13px;
-box-shadow:0 8px 25px #0002;
-}
-
-.due b{
-color:var(--blue);
-font-size:13px;
-}
-
-.due strong{
-display:block;
-font-size:20px;
-}
-
-.due small{
-font-size:10px;
-color:var(--muted);
-}
-
-@keyframes move{
-0%{transform:translateX(0)}
-45%{transform:translateX(-430px)}
-50%{transform:translateX(-430px)}
-95%{transform:translateX(0)}
-100%{transform:translateX(0)}
-}
-
-/* SECTIONS */
-
-.section{
-padding:72px 0;
-min-width:0;
-}
-
-.head{
-text-align:center;
-max-width:760px;
-margin:0 auto 35px;
-}
-
-.eyebrow{
-font-size:11px;
-color:var(--blue2);
-font-weight:900;
-letter-spacing:1.5px;
-}
-
-.head h2{
-font-size:40px;
-margin:5px 0;
-}
-
-.head p{
-color:var(--muted);
-}
-
-/* SERVICE BOX */
-
-.slider-box{
-background:#fff;
-border:1px solid var(--line);
-border-radius:22px;
-padding:22px;
-box-shadow:0 12px 40px #14325a12;
-width:100%;
-min-width:0;
-overflow:hidden;
-}
-
-.slider-title{
-display:flex;
-align-items:center;
 justify-content:space-between;
-gap:10px;
-margin-bottom:14px;
+align-items:center;
+gap:20px;
 }
 
-.slider-title h3{
-color:var(--blue);
-font-size:20px;
+.count-label{
+font-size:13px;
+color:#bcd1e8;
+text-transform:uppercase;
+letter-spacing:.8px;
 }
 
-.hint{
-font-size:11px;
+#nextTitle{
+font-size:23px;
+margin-top:3px;
+}
+
+#count{
+font-size:28px;
+font-weight:800;
+color:var(--gold);
+}
+
+/* SECTION */
+
+section{
+padding:65px 0;
+}
+
+.section-head{
+text-align:center;
+margin-bottom:35px;
+}
+
+.section-head .eyebrow{
+color:var(--blue2);
+font-size:13px;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+.section-head h2{
+font-size:34px;
+margin:5px 0 10px;
+}
+
+.section-head p{
 color:var(--muted);
+max-width:700px;
+margin:auto;
 }
 
-.slider-window{
-overflow:hidden;
+/* SERVICE SLIDER */
+
+.service-wrapper{
 position:relative;
 }
 
 .slider{
 display:flex;
-gap:13px;
+gap:16px;
 overflow-x:auto;
 scroll-behavior:smooth;
 scrollbar-width:none;
-padding:3px 2px 10px;
-width:100%;
-touch-action:pan-x;
+padding:8px 3px 18px;
 }
 
 .slider::-webkit-scrollbar{
 display:none;
 }
 
-.slide-card{
-flex:0 0 190px;
-background:#f5f8fc;
-border:1px solid var(--line);
-border-radius:14px;
-padding:17px;
+.service-card{
+min-width:220px;
+background:white;
+border:2px solid transparent;
+border-radius:17px;
+padding:23px;
+box-shadow:var(--shadow);
 cursor:pointer;
-transition:.2s;
-min-width:0;
+transition:.25s;
+flex:0 0 220px;
 }
 
-.slide-card:hover{
-transform:translateY(-4px);
-border-color:#9bc2e8;
+.service-card:hover{
+transform:translateY(-5px);
+border-color:#c8ddf5;
 }
 
-.slide-card.active{
-background:var(--blue);
-color:#fff;
-border-color:var(--blue);
-box-shadow:0 10px 25px #0a4b9130;
+.service-card.active{
+border-color:var(--blue2);
+background:#f0f7ff;
+box-shadow:0 12px 35px rgba(20,117,209,.18);
 }
 
-.slide-card .ico{
-font-size:24px;
-margin-bottom:9px;
+.service-icon{
+font-size:35px;
+margin-bottom:12px;
 }
 
-.slide-card h4{
-font-size:14px;
+.service-name{
+font-size:18px;
+font-weight:800;
 }
 
-.slide-card p{
-font-size:11px;
+.service-count{
+font-size:13px;
 color:var(--muted);
-margin-top:5px;
+margin-top:4px;
 }
 
-.slide-card.active p{
-color:#d7e8f8;
+.service-arrow{
+margin-top:15px;
+font-size:13px;
+font-weight:bold;
+color:var(--blue2);
 }
 
-.slider-arrows{
+.slider-controls{
 display:flex;
-gap:7px;
+justify-content:flex-end;
+gap:8px;
+margin-bottom:10px;
 }
 
-.arrow{
-border:1px solid var(--line);
-background:#fff;
-width:34px;
-height:34px;
-border-radius:8px;
+.slider-btn{
+width:40px;
+height:40px;
+border:none;
+border-radius:50%;
+background:var(--navy);
+color:white;
 cursor:pointer;
-color:var(--blue);
-font-weight:900;
-font-size:20px;
-}
-
-.arrow:hover{
-background:#edf5ff;
+font-size:18px;
 }
 
 /* SUB SERVICE */
 
-.sub-area,
-.doc-area{
-margin-top:25px;
-display:none;
-}
-
-.sub-area.show,
-.doc-area.show{
+#subArea{
 display:block;
-animation:fade .3s ease;
+margin-top:35px;
+padding:28px;
+background:white;
+border-radius:20px;
+box-shadow:var(--shadow);
 }
 
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(8px);
-}
-to{
-opacity:1;
-transform:none;
-}
-}
-
-.sub-area{
-border-top:1px dashed #cbd8e6;
-padding-top:23px;
-}
-
-.doc-area{
-border-top:1px dashed #cbd8e6;
-padding-top:25px;
-}
-
-.doc-head{
+.sub-heading{
 display:flex;
 justify-content:space-between;
 align-items:center;
 gap:15px;
+margin-bottom:20px;
 }
 
-.doc-head h3{
-color:var(--blue);
-font-size:25px;
+.sub-heading h3{
+font-size:23px;
 }
 
-.back{
-font-size:11px;
-color:var(--blue2);
-font-weight:900;
+.sub-slider{
+display:flex;
+gap:14px;
+overflow-x:auto;
+scrollbar-width:none;
+padding:5px 2px 15px;
+}
+
+.sub-slider::-webkit-scrollbar{
+display:none;
+}
+
+.sub-card{
+min-width:205px;
+flex:0 0 205px;
+background:#f7faff;
+border:1px solid var(--line);
+border-radius:14px;
+padding:18px;
 cursor:pointer;
+transition:.2s;
 }
 
-.doc-intro{
+.sub-card:hover{
+border-color:var(--blue2);
+background:#eef7ff;
+transform:translateY(-3px);
+}
+
+.sub-icon{
+width:35px;
+height:35px;
+border-radius:50%;
+background:#dceeff;
+color:var(--blue);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.sub-name{
+font-weight:800;
+font-size:16px;
+}
+
+.sub-small{
+font-size:12px;
 color:var(--muted);
-font-size:13px;
-margin-top:5px;
+margin-top:7px;
+}
+
+/* DOCUMENT AREA */
+
+#docArea{
+display:none;
+margin-top:25px;
+background:white;
+border-radius:20px;
+box-shadow:var(--shadow);
+overflow:hidden;
+}
+
+.doc-header{
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:white;
+padding:28px;
+}
+
+.doc-header h2{
+font-size:28px;
+}
+
+.doc-header p{
+color:#dce9f8;
+margin-top:6px;
+}
+
+.doc-body{
+padding:28px;
 }
 
 .doc-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:22px;
-margin-top:20px;
+gap:25px;
 }
 
-.doc-card{
-background:#f6f9fd;
+.info-box{
 border:1px solid var(--line);
 border-radius:15px;
-padding:19px;
-min-width:0;
+padding:20px;
+background:#fbfdff;
 }
 
-.doc-card h4{
-margin-bottom:10px;
+.info-box h3{
+font-size:18px;
+margin-bottom:13px;
 }
 
-.list{
-list-style:none;
-display:grid;
-gap:7px;
+.info-box ul{
+padding-left:20px;
 }
 
-.list li{
-font-size:12px;
-background:#fff;
-border-radius:8px;
-padding:9px;
-overflow-wrap:anywhere;
-}
-
-.list li:before{
-content:"✓";
-color:var(--green);
-font-weight:900;
-margin-right:7px;
+.info-box li{
+margin:7px 0;
 }
 
 .process{
-margin-top:18px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
-.chip{
-display:inline-block;
-background:#eaf3fd;
-color:var(--blue);
-font-size:11px;
-font-weight:800;
-border-radius:20px;
-padding:8px 11px;
-margin:3px;
+.process-chip{
+background:#edf6ff;
+border:1px solid #d5e9fb;
+padding:9px 13px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
 }
 
-.note{
-margin-top:15px;
-padding:12px 14px;
+.process-chip b{
+background:var(--blue);
+color:white;
+border-radius:50%;
+padding:2px 6px;
+margin-right:5px;
+}
+
+.due-note{
+margin-top:20px;
+padding:16px;
 background:#fff8df;
 border-left:4px solid var(--gold);
 border-radius:8px;
-font-size:11px;
-color:#6a5720;
+}
+
+.close-btn{
+margin-top:20px;
+background:#edf1f5;
+border:none;
+padding:11px 18px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* CALENDAR */
 
-.calendar{
-background:var(--navy);
-color:#fff;
+.calendar-box{
+background:white;
+padding:28px;
+border-radius:20px;
+box-shadow:var(--shadow);
 }
 
-.calendar .head p{
-color:#b9cce0;
-}
-
-.calendar .head h2{
-color:#fff;
-}
-
-.due-grid{
+.calendar-grid{
 display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:12px;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
 }
 
-.cal{
-background:#102f54;
-border:1px solid #285076;
-border-radius:13px;
-padding:16px;
+.calendar-card{
+padding:18px;
+border:1px solid var(--line);
+border-radius:14px;
+background:#fbfdff;
 }
 
-.cal b{
-color:var(--gold);
-font-size:12px;
+.calendar-date{
+font-size:27px;
+font-weight:900;
+color:var(--blue);
 }
 
-.cal strong{
-display:block;
-font-size:20px;
-margin:4px 0;
+.calendar-card h3{
+font-size:16px;
+margin:3px 0;
 }
 
-.cal p{
-font-size:11px;
-color:#c5d4e4;
+.calendar-card p{
+font-size:13px;
+color:var(--muted);
+}
+
+/* SERVICES FEATURES */
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.feature{
+background:white;
+border-radius:16px;
+padding:25px;
+box-shadow:var(--shadow);
+}
+
+.feature-icon{
+font-size:32px;
+margin-bottom:12px;
+}
+
+.feature h3{
+font-size:18px;
+margin-bottom:7px;
+}
+
+.feature p{
+color:var(--muted);
+font-size:14px;
 }
 
 /* CTA */
 
 .cta{
-background:linear-gradient(135deg,#0a4b91,#071d3b);
-color:#fff;
-text-align:center;
-padding:70px 0;
+background:linear-gradient(135deg,var(--navy),var(--blue));
+color:white;
+}
+
+.cta-box{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
 }
 
 .cta h2{
-font-size:39px;
+font-size:32px;
 }
 
 .cta p{
-color:#c6d8ea;
-margin:10px auto 22px;
-max-width:650px;
+color:#dce9f8;
+margin-top:5px;
+}
+
+.cta-buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
 /* FOOTER */
 
 footer{
-background:#04152c;
-color:#9fb5cd;
-padding:25px 0;
-font-size:11px;
+background:#04152d;
+color:#c5d3e3;
+padding:35px 0;
 }
 
-.foot{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:10px;
+.footer-grid{
+display:grid;
+grid-template-columns:1.3fr 1fr 1fr;
+gap:30px;
 }
 
-.phone{
-color:var(--gold);
-font-weight:900;
+footer h3{
+color:white;
+margin-bottom:10px;
+}
+
+footer p,
+footer li{
+font-size:14px;
+margin:5px 0;
+}
+
+footer ul{
+list-style:none;
+}
+
+.copyright{
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:25px;
+padding-top:18px;
+font-size:13px;
+text-align:center;
 }
 
 /* MOBILE */
 
-@media(max-width:950px){
+@media(max-width:850px){
 
-nav{
+.nav-links{
 display:none;
 }
 
@@ -728,389 +747,388 @@ display:none;
 grid-template-columns:1fr;
 }
 
-.due-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-@media(max-width:650px){
-
-.top{
-display:none;
-}
-
-.nav{
-height:64px;
-}
-
-.brand{
-font-size:15px;
-}
-
-.brandmark{
-width:36px;
-height:36px;
-}
-
 .hero{
-padding:48px 0 38px;
-}
-
-.hero-grid{
-display:block;
-}
-
-.hero-grid>div{
-width:100%;
-}
-
-h1{
-font-size:clamp(34px,10vw,46px);
-line-height:1.08;
-margin:18px 0;
-}
-
-.hero p{
-font-size:15px;
-line-height:1.55;
-}
-
-.actions{
-display:grid;
-grid-template-columns:1fr 1fr;
-width:100%;
-gap:9px;
-}
-
-.actions .btn{
-width:100%;
-padding:13px 8px;
-font-size:13px;
-}
-
-.trust{
-display:flex;
-flex-wrap:wrap;
-gap:8px 14px;
-line-height:1.5;
-}
-
-.trust span{
-white-space:nowrap;
-}
-
-.deadline-strip{
-margin-top:28px;
-}
-
-.track{
-animation-duration:22s;
-}
-
-.hero-card{
-margin-top:28px;
-width:100%;
-}
-
-.section{
 padding:55px 0;
 }
 
-.head h2{
-font-size:30px;
+.countdown-box{
+flex-direction:column;
+align-items:flex-start;
 }
 
-.slider-box{
-padding:15px;
+.calendar-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
-.slider-title h3{
+.feature-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.topbar-inner{
+flex-direction:column;
+gap:4px;
+}
+
+.topbar-right{
+gap:10px;
+font-size:12px;
+}
+
+.nav{
+min-height:68px;
+}
+
+.logo-text h1{
 font-size:17px;
 }
 
-.slide-card{
-flex:0 0 165px;
+.logo-icon{
+width:40px;
+height:40px;
+font-size:19px;
+}
+
+.hero h2{
+font-size:37px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section{
+padding:48px 0;
+}
+
+.section-head h2{
+font-size:28px;
+}
+
+.service-card{
+min-width:185px;
+flex-basis:185px;
+padding:18px;
+}
+
+#subArea{
+padding:20px 15px;
+}
+
+.sub-card{
+min-width:180px;
+flex-basis:180px;
 }
 
 .doc-grid{
 grid-template-columns:1fr;
 }
 
-.doc-head{
-align-items:flex-start;
-flex-direction:column;
+.doc-body{
+padding:18px;
 }
 
-.due-grid{
-grid-template-columns:1fr 1fr;
+.doc-header{
+padding:22px 18px;
+}
+
+.doc-header h2{
+font-size:23px;
+}
+
+.calendar-grid{
+grid-template-columns:1fr;
+}
+
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+.cta-box{
+flex-direction:column;
+align-items:flex-start;
 }
 
 .cta h2{
-font-size:30px;
+font-size:27px;
 }
 
-.container{
-width:calc(100% - 32px);
-}
-
-}
-
-/* VERY SMALL PHONES */
-
-@media(max-width:380px){
-
-.container{
-width:calc(100% - 24px);
-}
-
-.actions{
+.footer-grid{
 grid-template-columns:1fr;
 }
 
-.slide-card{
-flex-basis:155px;
-}
-
-.due-grid{
-grid-template-columns:1fr;
+.hero-buttons .btn{
+width:100%;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- TOP BAR -->
-<div class="top">
-<div class="container">
-<span>Professional Tax • GST • Accounting • Compliance</span>
-<span>📞 08951954077</span>
+
+<div class="topbar">
+<div class="container topbar-inner">
+
+<div>
+Professional Tax & Compliance Services
+</div>
+
+<div class="topbar-right">
+<a href="tel:08951954077">📞 08951954077</a>
+<a href="mailto:finnistha@gmail.com">✉️ finnistha@gmail.com</a>
+</div>
+
 </div>
 </div>
+
 
 <!-- HEADER -->
+
 <header>
+
 <div class="container nav">
 
-<a class="brand" href="#home">
-<span class="brandmark">FW</span>
-<span>
-Finnistha
-<small>WEALTH & TAX CONSULTANCY</small>
-</span>
+<a href="#" class="logo">
+
+<div class="logo-icon">
+F
+</div>
+
+<div class="logo-text">
+<h1>Finnistha</h1>
+<span>Wealth & Tax Consultancy</span>
+</div>
+
 </a>
 
-<nav>
-<a href="#home">Home</a>
+
+<nav class="nav-links">
+
 <a href="#services">Services</a>
-<a href="#deadlines">Due Dates</a>
-<a href="#contact">Contact</a>
-<a class="navcall" href="tel:08951954077">Call Now</a>
+<a href="#calendar">Due Dates</a>
+<a href="#about">Why Us</a>
+<a href="#contact" class="nav-btn">Contact Us</a>
+
 </nav>
 
 </div>
+
 </header>
 
+
 <!-- HERO -->
-<section class="hero" id="home">
+
+<section class="hero">
 
 <div class="container hero-grid">
 
 <div>
 
-<span class="badge">
+<div class="badge">
 TAX • GST • ACCOUNTING • COMPLIANCE
-</span>
+</div>
 
-<h1>
-Smart Finance.
-<span class="gold">Clear Compliance.</span>
-Better Business.
-</h1>
+<h2>
+Smart <span>Tax & Financial</span><br>
+Solutions for Your Business
+</h2>
 
 <p>
-Finnistha Wealth & Tax Consultancy provides practical support for GST, Income Tax, accounting, payroll, registrations, notices and business documentation.
+Finnistha Wealth & Tax Consultancy provides professional support for GST, Income Tax, Accounting, PF, ESI, Business Registration, PAN, Loans and Tax Notice compliance.
 </p>
 
-<div class="actions">
+<div class="hero-buttons">
 
-<a class="btn gold" href="tel:08951954077">
-📞 Call Now
+<a
+class="btn btn-primary"
+href="#services">
+Explore Services →
 </a>
 
-<a class="btn outline"
-href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services."
-target="_blank"
-rel="noopener">
+<a
+class="btn btn-outline"
+href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services.">
 💬 WhatsApp
 </a>
 
-<a class="btn outline"
-href="mailto:finnistha@gmail.com?subject=Enquiry%20-%20Finnistha%20Wealth%20%26%20Tax%20Consultancy">
-✉️ Email Us
-</a>
-
-<a class="btn outline" href="#services">
-Explore Services
-</a>
-
-</div>
-
-<div class="trust">
-<span>✓ GST & Tax</span>
-<span>✓ Accounting</span>
-<span>✓ Payroll</span>
-<span>✓ Business Compliance</span>
-</div>
-
-<!-- MOVING DUE DATE STRIP -->
-<div class="deadline-strip">
-
-<div class="strip-title">
-Important Filing & Payment Dates
-</div>
-
-<div class="track">
-
-<div class="due">
-<b>TDS PAYMENT</b>
-<strong>7th</strong>
-<small>Generally following month</small>
-</div>
-
-<div class="due">
-<b>GST GSTR-1</b>
-<strong>11th</strong>
-<small>Monthly filers</small>
-</div>
-
-<div class="due">
-<b>PF / ESI</b>
-<strong>15th</strong>
-<small>Common monthly reference</small>
-</div>
-
-<div class="due">
-<b>GST GSTR-3B</b>
-<strong>20th</strong>
-<small>Monthly filers</small>
-</div>
-
-<div class="due">
-<b>ADVANCE TAX</b>
-<strong>15 Jun / Sep / Dec / Mar</strong>
-<small>Quarterly instalments</small>
-</div>
-
-<div class="due">
-<b>TDS RETURNS</b>
-<strong>31 Jul / Oct / Jan / May</strong>
-<small>Quarterly statements</small>
-</div>
-
-<div class="due">
-<b>GSTR-2B</b>
-<strong>14th</strong>
-<small>Generally generated monthly</small>
-</div>
-
-</div>
 </div>
 
 </div>
 
-<!-- COUNTDOWN CARD -->
 
 <div class="hero-card">
 
-<h3>
-📅 Compliance Countdown
-</h3>
+<h3>Our Key Services</h3>
 
-<div class="next">
-
-<small>NEXT STANDARD DUE DATE</small>
-
-<h2 id="nextTitle">
-Checking...
-</h2>
-
-<div class="count" id="count"></div>
-
+<div class="hero-point">
+<b>✓</b>
+GST Registration & Filing
 </div>
 
-<div class="mini">
-
-<div>
-<span>GST GSTR-1</span>
-<b>11th</b>
+<div class="hero-point">
+<b>✓</b>
+Income Tax Return Filing
 </div>
 
-<div>
-<span>GST GSTR-3B</span>
-<b>20th</b>
+<div class="hero-point">
+<b>✓</b>
+Accounting & Financial Statements
 </div>
 
-<div>
-<span>TDS Payment</span>
-<b>7th</b>
+<div class="hero-point">
+<b>✓</b>
+PF / ESI / Payroll
 </div>
 
-<div>
-<span>PF / ESI</span>
-<b>15th</b>
+<div class="hero-point">
+<b>✓</b>
+Business Registration
+</div>
+
+<div class="hero-point">
+<b>✓</b>
+Tax Notice Assistance
 </div>
 
 </div>
 
 </div>
 
-</div>
 </section>
 
 
-<!-- SERVICES -->
-<section class="section" id="services">
+<!-- MOVING DUE DATE -->
+
+<div class="due-strip">
+
+<div class="due-track">
+
+<span>📅 TDS Payment — Generally 7th</span>
+
+<span>📅 GSTR-1 — Generally 11th for monthly filers</span>
+
+<span>📅 PF / ESI — Common monthly compliance around 15th</span>
+
+<span>📅 GSTR-3B — Generally 20th for monthly filers</span>
+
+<span>📅 Advance Tax — 15 June / 15 September / 15 December / 15 March</span>
+
+</div>
+
+</div>
+
+
+<!-- COUNTDOWN -->
+
+<div class="countdown">
 
 <div class="container">
 
-<div class="head">
+<div class="countdown-box">
 
-<span class="eyebrow">
-INTERACTIVE SERVICES
-</span>
+<div>
+
+<div class="count-label">
+Next Compliance Date
+</div>
+
+<div id="nextTitle">
+Loading...
+</div>
+
+</div>
+
+<div id="count">
+00d 00h 00m 00s
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Our Services
+</div>
 
 <h2>
-Choose a Service
+Select a Main Service
 </h2>
 
 <p>
-Click a main service → choose a sub-service → view the exact client requirements and documents.
+Click a main service to see its related services. Then click the sub-service to view required documents, client requirements and process.
 </p>
 
 </div>
 
 
-<div class="slider-box">
+<div class="slider-controls">
 
-<!-- MAIN SERVICES -->
-<div class="slider-title">
-
-<h3>
-1. Main Services
-</h3>
-
-<div class="slider-arrows">
-
-<button class="arrow"
-onclick="scrollSlider('mainSlider',-350)">
+<button
+class="slider-btn"
+onclick="scrollSlider('mainSlider',-400)">
 ‹
 </button>
 
-<button class="arrow"
-onclick="scrollSlider('mainSlider',350)">
+<button
+class="slider-btn"
+onclick="scrollSlider('mainSlider',400)">
+›
+</button>
+
+</div>
+
+
+<!-- MAIN SERVICE SLIDER -->
+
+<div
+id="mainSlider"
+class="slider">
+</div>
+
+
+<!-- SUB SERVICE -->
+
+<div id="subArea">
+
+<div class="sub-heading">
+
+<h3 id="subTitle">
+Select a Main Service
+</h3>
+
+<div class="slider-controls">
+
+<button
+class="slider-btn"
+onclick="scrollSlider('subSlider',-350)">
+‹
+</button>
+
+<button
+class="slider-btn"
+onclick="scrollSlider('subSlider',350)">
 ›
 </button>
 
@@ -1118,307 +1136,481 @@ onclick="scrollSlider('mainSlider',350)">
 
 </div>
 
-<div class="slider" id="mainSlider"></div>
 
-
-<!-- SUB SERVICES -->
-<div class="sub-area" id="subArea">
-
-<div class="slider-title">
-
-<h3>
-2. Sub-Services:
-<span id="selectedMain"></span>
-</h3>
-
-<div class="slider-arrows">
-
-<button class="arrow"
-onclick="scrollSlider('subSlider',-300)">
-‹
-</button>
-
-<button class="arrow"
-onclick="scrollSlider('subSlider',300)">
-›
-</button>
-
+<div
+id="subSlider"
+class="sub-slider">
 </div>
-
-</div>
-
-<div class="slider" id="subSlider"></div>
 
 </div>
 
 
 <!-- DOCUMENT DETAILS -->
-<div class="doc-area" id="docArea">
 
-<div class="doc-head">
+<div id="docArea">
 
-<h3 id="docTitle"></h3>
+<div class="doc-header">
 
-<span class="back" onclick="closeDocs()">
-← Choose another sub-service
-</span>
+<h2 id="docTitle">
+Service Details
+</h2>
+
+<p id="docIntro">
+Select a service to view details.
+</p>
 
 </div>
 
-<p id="docIntro" class="doc-intro"></p>
 
+<div class="doc-body">
 
 <div class="doc-grid">
 
-<div class="doc-card">
 
-<h4>
+<div class="info-box">
+
+<h3>
 📋 Client Requirements
-</h4>
+</h3>
 
-<ul class="list" id="reqList"></ul>
-
-</div>
-
-
-<div class="doc-card">
-
-<h4>
-📄 Documents / Data Required
-</h4>
-
-<ul class="list" id="docList"></ul>
-
-</div>
+<ul id="reqList">
+</ul>
 
 </div>
 
 
-<div class="doc-card process">
+<div class="info-box">
 
-<h4>
+<h3>
+📁 Documents Required
+</h3>
+
+<ul id="docList">
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="info-box" style="margin-top:25px">
+
+<h3>
 🔄 Process
-</h4>
+</h3>
 
-<div id="process"></div>
+<div id="process" class="process">
+</div>
 
 </div>
 
 
-<div class="note" id="dueNote"></div>
+<div
+id="dueNote"
+class="due-note">
+</div>
 
 
-<div style="margin-top:18px">
+<div
+style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
 
-<a class="btn"
-style="background:var(--blue);color:#fff"
+<a
+class="btn btn-primary"
+href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20want%20to%20know%20more%20about%20your%20service.">
+💬 Enquire on WhatsApp
+</a>
+
+<a
+class="btn"
+style="background:var(--navy);color:white"
 href="tel:08951954077">
-📞 Discuss / Send Documents
+📞 Call Now
 </a>
 
-<a class="btn"
-style="background:#0b8f62;color:#fff;margin-left:7px"
-href="https://wa.me/918951954077?text=Hello%20Finnistha%2C%20I%20want%20to%20discuss%20a%20service."
-target="_blank"
-rel="noopener">
-💬 WhatsApp
-</a>
+<button
+class="close-btn"
+onclick="closeDocs()">
+Close Details
+</button>
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
 </div>
 
 </section>
 
 
-<!-- DUE DATE CALENDAR -->
+<!-- CALENDAR -->
 
-<section class="section calendar" id="deadlines">
+<section id="calendar">
 
 <div class="container">
 
-<div class="head">
+<div class="section-head">
 
-<span class="eyebrow" style="color:var(--gold)">
-COMPLIANCE CALENDAR
-</span>
+<div class="eyebrow">
+Compliance Calendar
+</div>
 
 <h2>
-Important Payment & Filing Due Dates
+Important Regular Due Dates
 </h2>
 
 <p>
-Standard reference dates. Government notifications, taxpayer category and filing frequency can change the applicable date.
+Common reference dates are shown below. Actual due dates may change based on taxpayer category, state, notifications or extensions.
 </p>
 
 </div>
 
 
-<div class="due-grid">
+<div class="calendar-box">
 
-<div class="cal">
-<b>TDS PAYMENT</b>
-<strong>7th</strong>
+<div class="calendar-grid">
+
+
+<div class="calendar-card">
+
+<div class="calendar-date">
+7th
+</div>
+
+<h3>
+TDS Payment
+</h3>
+
 <p>
-Generally by 7th of following month; March has a separate deadline.
+Generally payable by the 7th of the following month.
 </p>
+
 </div>
 
-<div class="cal">
-<b>GST GSTR-1</b>
-<strong>11th</strong>
+
+<div class="calendar-card">
+
+<div class="calendar-date">
+11th
+</div>
+
+<h3>
+GSTR-1
+</h3>
+
 <p>
-Monthly filers. Quarterly filers generally have a different due date.
+Generally applicable to monthly filers.
 </p>
+
 </div>
 
-<div class="cal">
-<b>PF / ESI</b>
-<strong>15th</strong>
+
+<div class="calendar-card">
+
+<div class="calendar-date">
+15th
+</div>
+
+<h3>
+PF / ESI
+</h3>
+
 <p>
-Common monthly reference; verify portal-generated due date.
+Common monthly compliance reference date.
 </p>
+
 </div>
 
-<div class="cal">
-<b>GST GSTR-3B</b>
-<strong>20th</strong>
+
+<div class="calendar-card">
+
+<div class="calendar-date">
+20th
+</div>
+
+<h3>
+GSTR-3B
+</h3>
+
 <p>
-Monthly filers; QRMP dates can differ by State/category.
+Generally applicable to monthly filers.
 </p>
+
 </div>
 
-<div class="cal">
-<b>ADVANCE TAX</b>
-<strong>15 Jun / Sep / Dec / Mar</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Why Finnistha
+</div>
+
+<h2>
+Professional Support for Your Compliance
+</h2>
+
 <p>
-Quarterly cumulative instalments.
+We help individuals, businesses and professionals manage recurring tax and accounting requirements with a simple process.
 </p>
+
 </div>
 
-<div class="cal">
-<b>TDS RETURNS</b>
-<strong>31 Jul / Oct / Jan / May</strong>
+
+<div class="feature-grid">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🎯
+</div>
+
+<h3>
+Accurate Compliance
+</h3>
+
 <p>
-Quarterly statement framework, subject to applicable rules.
+We focus on proper document review, reconciliation and timely compliance support.
 </p>
+
 </div>
 
-<div class="cal">
-<b>GSTR-2B</b>
-<strong>14th</strong>
+
+<div class="feature">
+
+<div class="feature-icon">
+📱
+</div>
+
+<h3>
+Easy Communication
+</h3>
+
 <p>
-Generally generated on the 14th of the succeeding month.
+Connect with us through phone, email or WhatsApp for quick assistance.
 </p>
+
 </div>
 
-<div class="cal">
-<b>ITR</b>
-<strong>Annual</strong>
+
+<div class="feature">
+
+<div class="feature-icon">
+🔐
+</div>
+
+<h3>
+Confidential Support
+</h3>
+
 <p>
-Due date depends on taxpayer category and applicable assessment year.
+Business and financial documents are handled professionally and responsibly.
 </p>
+
 </div>
 
-<div class="cal">
-<b>AUDIT REPORT</b>
-<strong>Annual</strong>
+
+<div class="feature">
+
+<div class="feature-icon">
+📊
+</div>
+
+<h3>
+Business-Focused
+</h3>
+
 <p>
-Applicable businesses should follow the notified assessment-year deadline.
+Accounting, GST and tax support designed for practical business requirements.
 </p>
+
 </div>
 
-<div class="cal">
-<b>GST ANNUAL RETURN</b>
-<strong>31 Dec*</strong>
+
+<div class="feature">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+Simple Process
+</h3>
+
 <p>
-Generally for applicable taxpayers; verify turnover/category.
+Select your service, check requirements and contact us for assistance.
 </p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🤝
+</div>
+
+<h3>
+Personal Assistance
+</h3>
+
+<p>
+Get service-specific guidance based on your documentation and requirements.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
 <!-- CTA -->
-<section class="cta" id="contact">
+
+<section id="contact" class="cta">
 
 <div class="container">
 
+<div class="cta-box">
+
+<div>
+
 <h2>
-Need Professional Tax & Compliance Support?
+Need Tax or Compliance Support?
 </h2>
 
 <p>
-Choose your service above, check the exact document checklist and contact Finnistha for assistance.
+Talk to Finnistha Wealth & Tax Consultancy today.
 </p>
 
-<div class="actions" style="justify-content:center">
+</div>
 
-<a class="btn gold"
+
+<div class="cta-buttons">
+
+<a
+class="btn btn-primary"
 href="tel:08951954077">
 📞 08951954077
 </a>
 
-<a class="btn outline"
-href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services."
-target="_blank"
-rel="noopener">
+<a
+class="btn btn-outline"
+href="https://wa.me/918951954077?text=Hello%20Finnistha%20Wealth%20%26%20Tax%20Consultancy%2C%20I%20need%20your%20services.">
 💬 WhatsApp
 </a>
 
-<a class="btn outline"
-href="mailto:finnistha@gmail.com?subject=Enquiry%20-%20Finnistha%20Wealth%20%26%20Tax%20Consultancy">
-✉️ finnistha@gmail.com
+<a
+class="btn btn-outline"
+href="mailto:finnistha@gmail.com">
+✉️ Email
 </a>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-<div class="container foot">
+<div class="container">
 
-<span>
-© 2026 Finnistha Wealth & Tax Consultancy
-</span>
+<div class="footer-grid">
 
-<span>
-Tax • GST • Accounting • Compliance
-</span>
 
-<span>
+<div>
 
-<a href="https://wa.me/918951954077"
-target="_blank"
-rel="noopener"
-style="color:#9fb5cd">
-WhatsApp
-</a>
+<h3>
+Finnistha Wealth & Tax Consultancy
+</h3>
 
-•
+<p>
+GST • Income Tax • Accounting • PF • ESI • Business Registration • PAN • Loans
+</p>
 
-<a href="mailto:finnistha@gmail.com"
-style="color:#9fb5cd">
-Email
-</a>
+<p>
+Professional tax and compliance support for individuals and businesses.
+</p>
 
-•
+</div>
 
-<a href="tel:08951954077"
-class="phone">
-08951954077
-</a>
 
-</span>
+<div>
+
+<h3>
+Quick Services
+</h3>
+
+<ul>
+
+<li>GST Filing</li>
+<li>Income Tax Return</li>
+<li>Bookkeeping</li>
+<li>PF / ESI</li>
+<li>Business Registration</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+📞 08951954077
+</p>
+
+<p>
+✉️ finnistha@gmail.com
+</p>
+
+<p>
+💬 WhatsApp Available
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Finnistha Wealth & Tax Consultancy. All Rights Reserved.
+
+</div>
 
 </div>
 
@@ -1428,7 +1620,7 @@ class="phone">
 <script>
 
 /* =========================================================
-   COMPLETE FINNISTHA SERVICE DATABASE
+   SERVICE DATABASE
    ========================================================= */
 
 const services = {
@@ -1436,61 +1628,27 @@ const services = {
 gst:{
 name:"GST Services",
 icon:"🧾",
-desc:"GST registration, returns and compliance.",
+
 subs:{
 
-reg:{
-n:"GST Registration",
-i:"📝",
-d:"New GST registration for eligible businesses.",
-r:[
-"Confirm business constitution and activity",
-"Provide principal business address",
-"Confirm authorised signatory",
-"Confirm nature of business"
-],
-docs:[
-"PAN",
-"Aadhaar",
-"Photograph",
-"Mobile number and email",
+registration:{
+name:"GST Registration",
+intro:"Complete GST registration support for eligible businesses.",
+
+req:[
+"PAN Card",
+"Aadhaar Card",
+"Mobile number & Email",
 "Business address proof",
-"Rent agreement / ownership proof where applicable",
-"Electricity bill / address proof",
-"Bank proof",
+"Bank account details",
+"Photograph",
 "Business constitution documents"
 ],
-p:[
-"Document verification",
-"Application preparation",
-"Portal submission",
-"ARN tracking",
-"Department clarification if required",
-"GST certificate"
-],
-due:"Registration timelines depend on liability and applicable notification. We will confirm the applicable requirement."
-},
 
-gstr1:{
-n:"GSTR-1 Filing",
-i:"📤",
-d:"Sales / outward-supply return preparation and filing.",
-r:[
-"Share complete sales data for the tax period",
-"Confirm B2B and B2C sales",
-"Confirm export / SEZ transactions if applicable",
-"Confirm credit and debit notes",
-"Review draft before filing"
-],
 docs:[
-"Sales register",
-"Tax invoices",
-"Credit / debit notes",
-"Export documents if applicable",
-"Previous GSTR-1",
-"E-invoice data where applicable",
-"E-way bill details where relevant"
-],
-p:[
-"Data collection",
-"Invoice validation"
+"PAN Card",
+"Aadhaar Card",
+"Electricity bill / rental agreement",
+"Bank statement / cancelled cheque",
+"Partnership deed / incorporation documents, if 
+   
